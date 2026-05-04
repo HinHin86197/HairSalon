@@ -1,0 +1,48 @@
+.salon-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #d4af37;
+  }
+
+  nav {
+    a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #333;
+      font-size: 1rem;
+      position: relative;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #d4af37;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background: #d4af37;
+        bottom: -5px;
+        left: 50%;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover::after {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+}
